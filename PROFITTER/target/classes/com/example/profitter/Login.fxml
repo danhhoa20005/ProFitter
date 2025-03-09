@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.profitter.LoginController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="userName" layoutX="225.0" layoutY="161.0" />
+            <PasswordField fx:id="password" layoutX="225.0" layoutY="200.0" />
+            <Button fx:id="login" layoutX="257.0" layoutY="250.0" mnemonicParsing="false" onAction="#loginAction" text="ĐĂNG NHẬP" />
+            <Text layoutX="284.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOẶC" />
+            <Button fx:id="register" layoutX="258.0" layoutY="314.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="26.0" prefWidth="83.0" text="ĐĂNG KÝ" />
+            <Text layoutX="157.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFITTER">
+               <font>
+                  <Font name="AzonixRegular" size="45.0" />
+               </font>
+            </Text>
+            <Text layoutX="235.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ĐĂNG NHẬP">
+               <font>
+                  <Font name="UTM Facebook" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
