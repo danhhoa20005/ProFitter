@@ -1,0 +1,26 @@
+.button {
+    -fx-background-color: #2C3456;
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: transparent;
+    -fx-alignment: center;
+    -fx-padding: 10px 20px;
+    -fx-graphic-text-gap: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 2, 2);
+    -fx-cursor: hand;
+}
+
+/* Hiệu ứng hover */
+.button:hover {
+    -fx-background-color: #3A4268;
+    -fx-opacity: 0.8;
+}
+
+/* Hiệu ứng nhấn */
+.button:pressed {
+    -fx-background-color: #1E2749;
+    -fx-opacity: 1.0;
+}
+
+

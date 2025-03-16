@@ -7,16 +7,20 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    public static Stage primaryStage; // Lưu stage chính để dùng lại
+    public static boolean isAdmin = false;
+
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage stage) throws Exception {
+        primaryStage = stage; // Gán stage chính cho biến tĩnh
+
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-        primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root, 950, 600));
-        primaryStage.show();
+        stage.setTitle("PROFITTER");
+        stage.setScene(new Scene(root, 950, 650));
+        stage.show();
     }
 
     public static void main(String[] args) {
         launch(args);
     }
-    public static boolean isAdminLoggedIn = false;
 }

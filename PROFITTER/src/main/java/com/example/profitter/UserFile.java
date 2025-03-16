@@ -26,4 +26,21 @@ public class UserFile {
         }
         return users; // Trả về danh sách người dùng (có thể rỗng nếu có lỗi)
     }
+    public static void printAllUsers() {
+        List<Users> users = UserFile.loadUsers(); // Tải danh sách người dùng
+
+        if (users.isEmpty()) {
+            System.out.println("Không có tài khoản nào đã đăng ký!");
+            return;
+        }
+
+        System.out.println("Danh sách tài khoản đã đăng ký:");
+        for (Users user : users) {
+            System.out.println("Gmail: " + user.getEmail());
+            System.out.println("Tên: " + user.getName());
+            System.out.println("Tên đăng nhập: " + user.getUserName());
+            System.out.println("Mật khẩu (đã mã hóa): " + user.getPassword());
+            System.out.println("----------------------------");
+        }
+    }
 }
