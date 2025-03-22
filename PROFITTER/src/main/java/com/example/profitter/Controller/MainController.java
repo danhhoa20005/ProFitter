@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import java.io.IOException;
 
+import static com.example.profitter.Main.primaryStage;
+
 public class MainController {
     @FXML
     private Button login;
@@ -21,7 +23,6 @@ public class MainController {
             // Tạo Stage mới
             Stage mainStage = new Stage();
             mainStage.setTitle("PROFITTER");
-
             // Load file FXML và tạo Scene
             Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
             Scene scene = new Scene(root);

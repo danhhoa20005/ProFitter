@@ -7,6 +7,7 @@ import java.util.List;
 public class UserAuth {  // Thêm lớp chứa phương thức
 
     // Kiểm tra tài khoản đăng nhập
+    public static String name = "";
     public static boolean checkAccount(String username, String password) {
         List<Users> users = UserFile.loadUsers(); // Tải danh sách người dùng
         String hashedPassword = hashPassword(password); // Băm mật khẩu nhập vào
@@ -14,6 +15,7 @@ public class UserAuth {  // Thêm lớp chứa phương thức
         // Duyệt danh sách để kiểm tra tài khoản
         for (Users user : users) {
             if (user.getUserName().equals(username) && user.getPassword().equals(password)) {
+                name = user.getName();
                 return true; // Đăng nhập thành công
             }
         }
@@ -34,5 +36,8 @@ public class UserAuth {  // Thêm lớp chứa phương thức
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException("Lỗi: Không tìm thấy thuật toán mã hóa!", e);
         }
+    }
+    public static String getName() { // Getter để lấy giá trị
+        return name;
     }
 }

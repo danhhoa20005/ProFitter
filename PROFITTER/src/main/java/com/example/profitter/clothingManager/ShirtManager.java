@@ -48,8 +48,8 @@ public class ShirtManager {
             for (Image image : shirtPhoto) {
                 // Tạo ImageView để hiển thị ảnh
                 ImageView imageView = new ImageView(image);
-                imageView.setFitWidth(100); // Đặt chiều rộng ảnh là 200px
-                imageView.setFitHeight(100); // Đặt chiều cao ảnh là 200px
+                imageView.setFitWidth(150); // Đặt chiều rộng ảnh là 200px
+                imageView.setFitHeight(150); // Đặt chiều cao ảnh là 200px
 
                 // Gán sự kiện khi nhấp chuột vào ảnh
                 imageView.setOnMouseClicked(event -> {
@@ -73,7 +73,6 @@ public class ShirtManager {
                     row++;
 
                     // Giới hạn tối đa 3 hàng (3x3 = 9 ảnh)
-                    if (row >= 3) break;
                 }
             }
         }

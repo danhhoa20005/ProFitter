@@ -1,26 +1,30 @@
 .button {
-    -fx-background-color: #2C3456;
-    -fx-text-fill: white;
+    -fx-background-color: #ececec; /* Giữ nguyên màu nền */
+    -fx-text-fill: #485460; /* Giữ nguyên màu chữ */
+    -fx-font-family: "UTM Facebook K&T";
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
-    -fx-border-color: transparent;
+    -fx-border-color: #485460;
     -fx-alignment: center;
     -fx-padding: 10px 20px;
     -fx-graphic-text-gap: 15px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 2, 2);
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.4), 8, 0, 2, 2);
     -fx-cursor: hand;
 }
 
-/* Hiệu ứng hover */
+/* Hiệu ứng hover */    
 .button:hover {
-    -fx-background-color: #3A4268;
-    -fx-opacity: 0.8;
+    -fx-background-color: #d9d9d9; /* Sáng nhẹ hơn thay vì đổi màu xanh */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 6, 0, 2, 2);
+    -fx-opacity: 1.0;
 }
 
 /* Hiệu ứng nhấn */
 .button:pressed {
-    -fx-background-color: #1E2749;
+    -fx-background-color: #c4c4c4; /* Tối hơn khi nhấn */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 2, 2);
     -fx-opacity: 1.0;
 }
-
-
+.root {
+    -fx-font-family: "UTM Facebook K&T";
+}

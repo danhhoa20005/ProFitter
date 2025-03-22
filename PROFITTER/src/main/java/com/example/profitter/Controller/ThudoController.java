@@ -1,5 +1,6 @@
 package com.example.profitter.Controller;
 
+import com.example.profitter.Main;
 import com.example.profitter.clothingManager.PantsManager;
 import com.example.profitter.clothingManager.ShirtManager;
 import com.example.profitter.clothingManager.ShoesManager;
@@ -10,11 +11,13 @@ import javafx.scene.Parent;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -22,7 +25,10 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
+import static com.example.profitter.Main.isAdmin;
 import static com.example.profitter.Main.primaryStage;
 
 public class ThudoController {
@@ -53,6 +59,15 @@ public class ThudoController {
     // --------------chuyển các grid quần áo  -------------------------------------------------------------------
     @FXML
     private Button selectedButton; // Nút đang được chọn
+    @FXML
+    private Pane panePant;
+
+    @FXML
+    private Pane paneShoe;
+
+
+    @FXML
+    private Pane paneShirt;
 
     @FXML
     void backAction(ActionEvent event) {
@@ -79,9 +94,7 @@ public class ThudoController {
         removeSelectedClass();
         shirt.getStyleClass().add("selected");
 
-        gridShirt.setVisible(true);
-        gridPant.setVisible(false);
-        gridShoe.setVisible(false);
+        paneShirt.toFront();
     }
 
     @FXML
@@ -89,9 +102,7 @@ public class ThudoController {
         removeSelectedClass();
         pant.getStyleClass().add("selected");
 
-        gridShirt.setVisible(false);
-        gridPant.setVisible(true);
-        gridShoe.setVisible(false);
+        panePant.toFront();
     }
 
     @FXML
@@ -99,9 +110,7 @@ public class ThudoController {
         removeSelectedClass();
         shoe.getStyleClass().add("selected");
 
-        gridShirt.setVisible(false);
-        gridPant.setVisible(false);
-        gridShoe.setVisible(true);
+        paneShoe.toFront();
     }
 
     @FXML
@@ -185,6 +194,11 @@ public class ThudoController {
     private ShoesManager shoesManager;
 
     public void initialize() {
+        if (!isAdmin) {
+            addPant.setVisible(false);
+            addShirt.setVisible(false);
+            addShoe.setVisible(false);
+        }
         showShirt();
         // Khởi tạo các đối tượng quản lý quần áo
         shirtManager = new ShirtManager();
@@ -324,4 +338,157 @@ public class ThudoController {
         }
 
     }
+    // thêm quần đồ nếu là admin
+    @FXML
+    private Button addPant;
+
+    @FXML
+    private Button addShirt;
+
+    @FXML
+    private Button addShoe;
+
+    public void addShoesAction(ActionEvent event) {
+        // Kiểm tra xem người dùng có phải là admin hay không
+        if (isAdmin) {
+            // Mở hộp thoại chọn file ảnh
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Choose an image");
+            fileChooser.getExtensionFilters().addAll(
+                    new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif")
+            );
+            File file = fileChooser.showOpenDialog(null); // Lấy file được chọn
+
+            // Nếu shoesmodel không rỗng, thiết lập khả năng kéo thả cho đối tượng
+            if (shoesmodel != null) {
+                setDraggable(shoesmodel);
+            }
+
+            // Kiểm tra xem người dùng đã chọn file hay chưa
+            if (file != null) {
+                String sourceImagePath = file.getAbsolutePath(); // Lấy đường dẫn gốc của ảnh
+                String destinationDirectory = "ShoesPhoto"; // Thư mục đích để lưu ảnh
+                String destinationImagePath = destinationDirectory + File.separator + file.getName();
+                File destinationFile = new File(destinationImagePath); // Tạo file đích
+
+                try {
+                    // Sao chép ảnh từ thư mục nguồn đến thư mục đích
+                    Files.copy(Paths.get(sourceImagePath), destinationFile.toPath());
+
+                    // Hiển thị ảnh vừa chọn trên giao diện
+                    Image image = new Image(file.toURI().toString());
+                    shoesmodel.setImage(image);
+
+                    // Thêm giày mới vào danh sách quản lý
+                    shoesManager.addShoes(file);
+
+                    // Cập nhật lại giao diện hiển thị danh sách giày
+                    shoesManager.updateShoesGrid();
+                } catch (IOException e) {
+                    // Hiển thị thông báo lỗi nếu quá trình sao chép thất bại
+                    showAlert("Lỗi khi sao chép ảnh.", Alert.AlertType.ERROR);
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            // Nếu không phải admin, hiển thị cảnh báo
+            showAlert("Bạn cần đăng nhập bằng tài khoản admin để thực hiện thao tác này.", Alert.AlertType.WARNING);
+        }
+    }// thêm giày
+    public void addShirtAction(ActionEvent event) {
+        // Kiểm tra xem người dùng có phải là admin hay không
+        if (isAdmin) {
+            // Mở hộp thoại chọn file ảnh
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Chọn ảnh áo");
+            fileChooser.getExtensionFilters().addAll(
+                    new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif")
+            );
+            File file = fileChooser.showOpenDialog(null); // Lấy file được chọn
+
+            // Nếu shirtModel không rỗng, thiết lập khả năng kéo thả
+            if (shirtmodel != null) {
+                setDraggable(shirtmodel);
+            }
+
+            // Kiểm tra xem người dùng đã chọn file hay chưa
+            if (file != null) {
+                String sourceImagePath = file.getAbsolutePath(); // Lấy đường dẫn gốc của ảnh
+                String destinationDirectory = "ShirtPhoto"; // Thư mục đích để lưu ảnh
+                String destinationImagePath = destinationDirectory + File.separator + file.getName();
+                File destinationFile = new File(destinationImagePath); // Tạo file đích
+
+                try {
+                    // Sao chép ảnh từ thư mục nguồn đến thư mục đích
+                    Files.copy(Paths.get(sourceImagePath), destinationFile.toPath());
+
+                    // Hiển thị ảnh vừa chọn trên giao diện
+                    Image image = new Image(file.toURI().toString());
+                    shirtmodel.setImage(image);
+
+                    // Thêm áo mới vào danh sách quản lý
+                    shirtManager.addShirt(file);
+
+                    // Cập nhật lại giao diện hiển thị danh sách áo
+                    shirtManager.updateShirtGrid();
+                } catch (IOException e) {
+                    // Hiển thị thông báo lỗi nếu quá trình sao chép thất bại
+                    showAlert("Lỗi khi sao chép ảnh áo.", Alert.AlertType.ERROR);
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            // Nếu không phải admin, hiển thị cảnh báo
+            showAlert("Bạn cần đăng nhập bằng tài khoản admin để thực hiện thao tác này.", Alert.AlertType.WARNING);
+        }
+    }// thêm áo
+    public void addPantAction(ActionEvent event) {
+        // Kiểm tra xem người dùng có phải là admin hay không
+        if (isAdmin) {
+            // Mở hộp thoại chọn file ảnh
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Chọn ảnh quần");
+            fileChooser.getExtensionFilters().addAll(
+                    new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif")
+            );
+            File file = fileChooser.showOpenDialog(null); // Lấy file được chọn
+
+            // Nếu pantModel không rỗng, thiết lập khả năng kéo thả
+            if (pantmodel != null) {
+                setDraggable(pantmodel);
+            }
+
+            // Kiểm tra xem người dùng đã chọn file hay chưa
+            if (file != null) {
+                String sourceImagePath = file.getAbsolutePath(); // Lấy đường dẫn gốc của ảnh
+                String destinationDirectory = "PantPhoto"; // Thư mục đích để lưu ảnh
+                String destinationImagePath = destinationDirectory + File.separator + file.getName();
+                File destinationFile = new File(destinationImagePath); // Tạo file đích
+
+                try {
+                    // Sao chép ảnh từ thư mục nguồn đến thư mục đích
+                    Files.copy(Paths.get(sourceImagePath), destinationFile.toPath());
+
+                    // Hiển thị ảnh vừa chọn trên giao diện
+                    Image image = new Image(file.toURI().toString());
+                    pantmodel.setImage(image);
+
+                    // Thêm quần mới vào danh sách quản lý
+                    pantsManager.addPants(file);
+
+                    // Cập nhật lại giao diện hiển thị danh sách quần
+                    pantsManager.updatePantsGrid();
+                } catch (IOException e) {
+                    // Hiển thị thông báo lỗi nếu quá trình sao chép thất bại
+                    showAlert("Lỗi khi sao chép ảnh quần.", Alert.AlertType.ERROR);
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            // Nếu không phải admin, hiển thị cảnh báo
+            showAlert("Bạn cần đăng nhập bằng tài khoản admin để thực hiện thao tác này.", Alert.AlertType.WARNING);
+        }
+    }// thêm quần
+    
+
 }

@@ -42,6 +42,7 @@ public class LoginController {
     }
     else{
         try {
+
             // Kiểm tra tài khoản
             if(username.equals("admin") && userPassword.equals("admin")) {
                 Main.isAdmin = true;

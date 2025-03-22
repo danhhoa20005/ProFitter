@@ -1,23 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.profitter.Controller.MainController">
-   <top>
-      <AnchorPane prefHeight="118.0" prefWidth="950.0" stylesheets="@java.css" BorderPane.alignment="CENTER">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" style="-fx-background-color: linear-gradient(to bottom, #F2F4F8, #DDE1E7);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.profitter.Controller.MainController">
+   <left>
+      <AnchorPane prefHeight="530.0" prefWidth="505.0" style="-fx-background-color: #d2dae2;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="login" layoutX="651.0" layoutY="29.0" mnemonicParsing="false" onAction="#loginAction" prefWidth="117.0" stylesheets="@java.css" text="đăng nhập">
+            <ImageView fitHeight="119.0" fitWidth="102.0" layoutX="71.0" layoutY="464.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2);">
+               <image>
+                  <Image url="@Controller/Image/50bbfcd9-3e48-4bdd-b85c-6623574f0ab4.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="97.0" fitWidth="71.0" layoutX="1.0" layoutY="308.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-opacity: 0.2;">
+               <image>
+                  <Image url="@Controller/Image/394753a8-438e-4902-93be-aa889c58c8c9.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="150.0" layoutX="304.0" layoutY="139.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-opacity: 0.9;">
+               <image>
+                  <Image url="@Controller/Image/𝑆𝐴𝑉𝐸%20=%20𝐹𝐿𝑂𝑊%20𝑀𝐸_@𝒉𝒐𝒂𝒏𝒈𝒕𝒉𝒊𝒒𝒖𝒚𝒆𝒏266.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="178.0" fitWidth="143.0" layoutX="65.0" layoutY="111.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-opacity: 1;">
+               <image>
+                  <Image url="@Controller/Image/𝑆𝐴𝑉𝐸%20=%20𝐹𝐿𝑂𝑊%20𝑀𝐸_@𝒉𝒐𝒂𝒏𝒈𝒕𝒉𝒊𝒒𝒖𝒚𝒆𝒏266%20(2).jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="80.0" fitWidth="50.0" layoutX="329.0" layoutY="503.0" style="-fx-opacity: 0.2;">
+               <image>
+                  <Image url="@Controller/Image/12262c43-b93a-4136-b51d-6afdec69d0a6.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="80.0" fitWidth="50.0" layoutX="304.0" layoutY="111.0" style="-fx-opacity: 0.2;">
+               <image>
+                  <Image url="@Controller/Image/5f4b1c48-e020-40e5-9903-c85b9ee07d6a.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="159.0" layoutX="316.0" layoutY="329.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2);">
+               <image>
+                  <Image url="@Controller/Image/Street%20style%20siêu%20_chất_%20của%20giới%20trẻ%20Hàn%20tuần%20qua%20sẽ%20khiến%20bạn%20muốn%20lên%20đồ%20thật%20cool%20ngầu%20cả%20mùa%20đông%20này.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="97.0" fitWidth="71.0" layoutX="36.0" layoutY="406.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-opacity: 0.2;">
+               <image>
+                  <Image url="@Controller/Image/394753a8-438e-4902-93be-aa889c58c8c9.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="153.0" layoutX="176.0" layoutY="423.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2);">
+               <image>
+                  <Image url="@Controller/Image/Hóa%20nam%20thần%20với%206%20cách%20phối%20đồ%20mùa%20hè%20nam%20vô%20cùng%20đơn%20giản%20-%20Beaudy_vn.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="149.0" layoutX="155.0" layoutY="91.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-opacity: 0.9;">
+               <image>
+                  <Image url="@Controller/Image/bde4ef0f-7394-4ae2-93b5-2856f720263e.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="80.0" fitWidth="50.0" layoutX="431.0" layoutY="268.0" style="-fx-opacity: 0.2;">
+               <image>
+                  <Image url="@Controller/Image/5f4b1c48-e020-40e5-9903-c85b9ee07d6a.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="144.0" layoutX="50.0" layoutY="254.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2);">
+               <image>
+                  <Image url="@Controller/Image/775ea22d-d53e-4ff5-81a2-310c57a96dd9%20-%20Copy.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="149.0" layoutX="167.0" layoutY="239.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2);">
+               <image>
+                  <Image url="@Controller/Image/394753a8-438e-4902-93be-aa889c58c8c9.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="80.0" fitWidth="50.0" layoutX="25.0" layoutY="239.0" style="-fx-opacity: 0.2;">
+               <image>
+                  <Image url="@Controller/Image/5f4b1c48-e020-40e5-9903-c85b9ee07d6a.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="#1e253d" layoutX="14.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-stroke: white; -fx-stroke-width: 3;" text="PROFITTER" wrappingWidth="455.00194373497595">
                <font>
-                  <Font name="UTM Facebook K&amp;T" size="12.0" />
-               </font></Button>
-            <Button fx:id="register" layoutX="799.0" layoutY="29.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="26.0" prefWidth="104.0" text="đăng ký">
-               <font>
-                  <Font name="UTM Facebook K&amp;T" size="12.0" />
-               </font></Button>
+                  <Font name="UTM Facebook" size="66.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
-   </top>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #d2dae2;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="register" layoutX="269.0" layoutY="14.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="38.0" prefWidth="147.0" stylesheets="@java.css" text="ĐĂNG KÝ">
+               <font>
+                  <Font name="UTM Facebook K&amp;T" size="12.0" />
+               </font></Button>
+            <Button fx:id="login" layoutX="98.0" layoutY="13.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="40.0" prefWidth="150.0" stylesheets="@java.css" text="ĐĂNG NHẬP">
+               <font>
+                  <Font name="UTM Facebook K&amp;T" size="13.0" />
+               </font></Button>
+            <Text fill="#1e253d" layoutX="24.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trong thế giới thời trang, &quot;sáng tạo không giới hạn&quot; không chỉ là một câu nói – đó là một tuyên ngôn, một lời mời gọi bước vào vũ trụ vô tận của màu sắc, chất liệu và phong cách. Khi phối đồ, bạn không bị ràng buộc bởi bất kỳ quy tắc cứng nhắc nào – chính sự phá cách mới tạo nên dấu ấn riêng." wrappingWidth="396.3251037597656">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Text>
+            <Text fill="#1e253d" fontSmoothingType="LCD" layoutX="27.0" layoutY="226.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-stroke: white; -fx-stroke-width: 3; -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2);" text="SÁNG TẠO KHÔNG GIỚI HẠN" wrappingWidth="389.3361863974144">
+               <font>
+                  <Font name="UTM Facebook" size="73.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
 </BorderPane>

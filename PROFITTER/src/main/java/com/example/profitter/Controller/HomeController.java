@@ -1,17 +1,19 @@
 package com.example.profitter.Controller;
 
-import com.example.profitter.Main;
+import com.example.profitter.UserAuth;
+import com.example.profitter.Users;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import static com.example.profitter.Main.primaryStage;
+
 
 public class HomeController {
 
@@ -43,6 +45,16 @@ public class HomeController {
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+    @FXML
+    private Label nameuser;
+
+    public void initialize() {
+        if (nameuser != null) {
+            nameuser.setText("HI, " + UserAuth.getName());
+        } else {
+            System.out.println("Lỗi: nameuser chưa được khởi tạo!");
         }
     }
 
