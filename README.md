@@ -81,7 +81,7 @@ d) giao diện phối đồ
 e, kho lưu trữ hoặc tham khảo
 ![alt text](https://github.com/danhhoa20005/ProFitter/blob/main/photo/Screenshot%202025-03-23%20205114.png)
 #### 4. Video demo sản phẩm
-https://youtu.be/M0plYF6yOdg
+[https://youtu.be/M0plYF6yOdg](https://youtu.be/rZqHrTrx_jQ)
 
 #### 5. Môi trường
 - **Phát triển trên**: IntelliJ IDEA
