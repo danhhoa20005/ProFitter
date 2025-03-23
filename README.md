@@ -64,18 +64,22 @@ ProFitter là ứng dụng hỗ trợ phối đồ thông minh, giúp người d
 #### 3. Ảnh chụp màn hình
 a) Giao diện trang đầu
 
-![alt text]([image.png](https://github.com/danhhoa20005/ProFitter/blob/main/photo/Screenshot%202025-03-23%20205040.png))
+![alt text](https://github.com/danhhoa20005/ProFitter/blob/main/photo/Screenshot%202025-03-23%20205040.png)
 
 b/ giao diện đăng nhập đăng ký
+
 ![alt text](https://github.com/danhhoa20005/ProFitter/blob/main/photo/Screenshot%202025-03-23%20205052.png)
-b) Giao diện phối đồ
 
-![alt text](image-1.png)
+c) Giao diện bên trong( có thể phát triển thêm)
 
-c) Danh sách trang phục
+![alt text](https://github.com/danhhoa20005/ProFitter/blob/main/photo/Screenshot%202025-03-23%20205100.png)
 
-![alt text](image-2.png)
+d) giao diện phối đồ
 
+![alt text](https://github.com/danhhoa20005/ProFitter/blob/main/photo/Screenshot%202025-03-23%20205105.png)
+
+e, kho lưu trữ hoặc tham khảo
+![alt text](https://github.com/danhhoa20005/ProFitter/blob/main/photo/Screenshot%202025-03-23%20205114.png)
 #### 4. Video demo sản phẩm
 https://youtu.be/M0plYF6yOdg
 
