@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.example.profitter.Main.primaryStage;
 
 
 public class HomeController {
@@ -34,18 +35,17 @@ public class HomeController {
             mainStage.setTitle("PROFITTER");
 
             // Load file FXML và tạo Scene
-            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-            Scene scene = new Scene(root);
-            mainStage.setScene(scene);
-            mainStage.show();
+            Parent root = FXMLLoader.load(getClass().getResource("/com/example/profitter/Main.fxml"));
+            Stage stage = (Stage) thudo.getScene().getWindow();
 
-            // Đóng Stage hiện tại (cửa sổ đăng nhập)
-            Stage currentStage = (Stage) exit.getScene().getWindow();
-            currentStage.close();
+            // Cập nhật root của Scene (dùng chung Stage, không tạo cái mới)
+            stage.getScene().setRoot(root);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
     }
     @FXML
     private Label nameuser;
