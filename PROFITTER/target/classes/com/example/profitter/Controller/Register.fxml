@@ -13,36 +13,36 @@
       <TextField fx:id="name" layoutX="225.0" layoutY="173.0" />
       <TextField fx:id="userName" layoutX="224.0" layoutY="206.0" />
       <PasswordField fx:id="password" layoutX="225.0" layoutY="244.0" />
-      <Text fill="#485460" layoutX="167.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mật khẩu">
+      <Text fill="#485460" layoutX="150.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mật khẩu">
          <font>
 
-            <Font name="UTM Facebook K&amp;T" size="12.0" />
+            <Font name="Bungee Regular" size="12.0" />
          </font></Text>
-      <Text fill="#485460" layoutX="169.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tài khoản">
+      <Text fill="#485460" layoutX="147.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tài khoản">
          <font>
-            <Font name="UTM Facebook K&amp;T" size="12.0" />
+            <Font name="Bungee Regular" size="12.0" />
          </font></Text>
-      <Text fill="#485460" layoutX="183.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tên ">
+      <Text fill="#485460" layoutX="169.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tên ">
          <font>
-            <Font name="UTM Facebook K&amp;T" size="12.0" />
+            <Font name="Bungee Regular" size="12.0" />
          </font>
       </Text>
-      <Text fill="#485460" layoutX="180.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="gmail">
+      <Text fill="#485460" layoutX="161.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="gmail">
          <font>
-            <Font name="UTM Pacific Standard" size="12.0" />
+            <Font name="Bungee Regular" size="12.0" />
          </font>
       </Text>
       <Button fx:id="register" layoutX="244.0" layoutY="281.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="40.0" prefWidth="106.0" stylesheets="@../java.css" text="đăng ký" />
-      <Text fill="#485460" layoutX="157.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-stroke: white; -fx-stroke-width: 3;" text="PROFITTER">
+      <Text fill="#485460" layoutX="129.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-stroke: white; -fx-stroke-width: 3;" text="PROFITTER">
          <font>
-            <Font name="AzonixRegular" size="45.0" />
+            <Font name="Bungee Regular" size="56.0" />
          </font>
       </Text>
       <Text fill="#485460" layoutX="235.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ĐĂNG KÝ">
          <font>
-            <Font name="UTM Facebook" size="28.0" />
+            <Font name="Bungee Regular" size="28.0" />
          </font>
       </Text>
-      <Button fx:id="login" layoutX="250.0" layoutY="332.0" mnemonicParsing="false" onAction="#LoginAction" stylesheets="@../java.css" text="đăng nhập" />
+      <Button fx:id="login" layoutX="244.0" layoutY="342.0" mnemonicParsing="false" onAction="#LoginAction" prefHeight="44.0" prefWidth="106.0" stylesheets="@../java.css" text="đăng nhập" />
    </children>
 </AnchorPane>

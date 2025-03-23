@@ -25,6 +25,12 @@
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 2, 2);
     -fx-opacity: 1.0;
 }
-.root {
-    -fx-font-family: "UTM Facebook K&T";
+.otherFont {
+    -fx-font-family: "UTM Facebook"; /* Đổi thành font mong muốn */
+}
+.custom-font {
+    -fx-font-family: "UTM Facebook";
+}
+.text {
+    -fx-font-family: "UTM Facebook";
 }

@@ -6,7 +6,7 @@ module com.example.profitter {
     requires java.desktop;
 
     opens com.example.profitter to javafx.fxml;
-    exports com.example.profitter;// Thêm dòng này để sử dụng BufferedImage
+    exports com.example.profitter;
     exports com.example.profitter.Controller;
     opens com.example.profitter.Controller to javafx.fxml;
     exports com.example.profitter.clothingManager;

@@ -4,6 +4,9 @@ import com.example.profitter.Main;
 import com.example.profitter.clothingManager.PantsManager;
 import com.example.profitter.clothingManager.ShirtManager;
 import com.example.profitter.clothingManager.ShoesManager;
+import javafx.animation.FadeTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +14,7 @@ import javafx.scene.Parent;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.PixelReader;
@@ -20,6 +24,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -146,10 +151,13 @@ public class ThudoController {
 
     private void savePhoto() {
         try {
+            // Chụp ảnh từ paneImage
             WritableImage image = paneImage.snapshot(new SnapshotParameters(), null);
             PixelReader reader = image.getPixelReader();
             int width = (int) image.getWidth();
             int height = (int) image.getHeight();
+
+            // Tạo BufferedImage từ WritableImage
             BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
             for (int y = 0; y < height; y++) {
                 for (int x = 0; x < width; x++) {
@@ -157,6 +165,7 @@ public class ThudoController {
                 }
             }
 
+            // Hộp thoại cho phép người dùng chọn nơi lưu ảnh
             FileChooser fileChooser = new FileChooser();
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("PNG Images", "*.png"));
             File file = fileChooser.showSaveDialog(null);
@@ -167,6 +176,17 @@ public class ThudoController {
             } else {
                 showAlert("Hủy lưu ảnh.", Alert.AlertType.INFORMATION);
             }
+
+            // **Lưu tự động vào thư mục "khoPhoto"**
+            File backupDir = new File("khoPhoto");
+            if (!backupDir.exists()) {
+                backupDir.mkdirs(); // Tạo thư mục nếu chưa tồn tại
+            }
+
+            File backupFile = new File(backupDir, "backup_" + System.currentTimeMillis() + ".png");
+            ImageIO.write(bufferedImage, "png", backupFile);
+            System.out.println("Ảnh đã được lưu tự động vào: " + backupFile.getAbsolutePath());
+
         } catch (IOException e) {
             showAlert("Lỗi khi lưu ảnh.", Alert.AlertType.ERROR);
             e.printStackTrace();
@@ -188,12 +208,22 @@ public class ThudoController {
 
     @FXML
     private ImageView shoesmodel;
+
     //------------------------- quản lý grid quần áo----------------------
     private ShirtManager shirtManager;
     private PantsManager pantsManager;
     private ShoesManager shoesManager;
 
     public void initialize() {
+        // Lắng nghe thay đổi của Slider
+        opa.valueProperty().addListener((obs, oldVal, newVal) -> {
+            double opacity = newVal.doubleValue();
+
+            // Tạo hiệu ứng mờ dần
+            FadeTransition fade = new FadeTransition(Duration.seconds(0.5), nen);
+            fade.setToValue(opacity);
+            fade.play();
+        });
         if (!isAdmin) {
             addPant.setVisible(false);
             addShirt.setVisible(false);
@@ -489,6 +519,11 @@ public class ThudoController {
             showAlert("Bạn cần đăng nhập bằng tài khoản admin để thực hiện thao tác này.", Alert.AlertType.WARNING);
         }
     }// thêm quần
-    
+
+    @FXML
+    private ImageView nen;
+
+    @FXML
+    private Slider opa;
 
 }

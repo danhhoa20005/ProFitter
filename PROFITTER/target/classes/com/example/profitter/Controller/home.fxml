@@ -29,12 +29,12 @@
                   </Button>
                   <Button fx:id="exit" layoutX="9.0" layoutY="568.0" mnemonicParsing="false" onAction="#exitAction" prefHeight="46.0" prefWidth="134.0" style="-fx-border-color: white;" stylesheets="@../java.css" text="ĐĂNG XUẤT">
                      <font>
-                        <Font name="UTM Facebook K&amp;T" size="16.0" />
+                        <Font name="UTM Facebook K&amp;T" size="13.0" />
                      </font>
                   </Button>
-                  <Text fill="WHITE" layoutX="24.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 4, 0.8, 0, 0);" text="PROPTIT">
+                  <Text fill="WHITE" layoutX="19.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 4, 0.8, 0, 0);" text="PROPTIT">
                      <font>
-                        <Font name="AzonixRegular" size="24.0" />
+                        <Font name="Bungee Regular" size="24.0" />
                      </font>
                   </Text>
                </children>
@@ -43,26 +43,26 @@
       </VBox>
       <AnchorPane prefHeight="650.0" prefWidth="787.0" style="-fx-background-color: #d2dae2;">
          <children>
-            <Text fill="#353a56" layoutX="70.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, white, 4, 0.8, 0, 0);" text="PROFITTER" wrappingWidth="377.60003662109375">
+            <Text fill="#353a56" layoutX="30.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, white, 4, 0.8, 0, 0);" text="PROFITTER" wrappingWidth="377.60003662109375">
                <font>
-                  <Font name="AzonixRegular" size="51.0" />
+                  <Font name="Bungee Regular" size="51.0" />
                </font>
             </Text>
             <Pane layoutX="30.0" layoutY="103.0" prefHeight="178.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to right, #c1c7cf, #d2dae2);; -fx-background-radius: 20px; -fx-border-color: #485460; -fx-border-radius: 20; -fx-border-width: 3;" stylesheets="@../java.css">
                <children>
-                  <Text fill="#485460" layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NEW" wrappingWidth="163.2">
+                  <Text fill="#485460" layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, white, 4, 0.8, 0, 0);" text="NEW" wrappingWidth="163.2">
                      <font>
-                        <Font name="UTM Facebook" size="17.0" />
+                        <Font name="Bungee Regular" size="17.0" />
                      </font>
                   </Text>
                   <Text fill="#485460" layoutX="14.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Streetwear – Phong cách đường phố, năng động, oversized, sneaker, hoodie" wrappingWidth="371.5774230957031">
                      <font>
-                        <Font name="UTM Facebook" size="13.0" />
+                        <Font name="UTM Facebook K&amp;T" size="15.0" />
                      </font>
                   </Text>
                   <Text fill="#485460" layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vintage – Cổ điển, áo sơ mi retro, quần ống rộng, màu sắc trầm" wrappingWidth="371.5774230957031">
                      <font>
-                        <Font name="UTM Facebook.ttf" size="14.0" />
+                        <Font name="UTM Facebook K&amp;T" size="15.0" />
                      </font>
                   </Text>
                   <Text fill="#485460" layoutX="14.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minimalism – Tối giản, ít họa tiết, màu trung tính, form gọn gàng." wrappingWidth="371.5774230957031">
@@ -73,16 +73,16 @@
                </children></Pane>
             <Pane layoutX="467.0" layoutY="103.0" prefHeight="178.0" prefWidth="300.0" style="-fx-background-color: #d2dae2; -fx-background-radius: 20px; -fx-border-color: #485460; -fx-border-radius: 20; -fx-border-width: 3;" stylesheets="@../java.css">
                <children>
-                  <Text fill="#485460" layoutX="14.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ITEM" wrappingWidth="163.2">
+                  <Text fill="#485460" layoutX="14.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, white, 4, 0.8, 0, 0);" text="ITEM" wrappingWidth="163.2">
                      <font>
-                        <Font name="UTM Facebook" size="17.0" />
+                        <Font name="Bungee Regular" size="17.0" />
                      </font>
                   </Text>
                   <Pane layoutX="14.0" layoutY="35.0" prefHeight="38.0" prefWidth="255.0" style="-fx-background-color: #485460; -fx-background-radius: 20px; -fx-border-color: #485460; -fx-border-radius: 10; -fx-border-width: 3;" stylesheets="@../java.css">
                      <children>
                         <Text fill="WHITE" layoutX="46.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ÁO" textAlignment="CENTER" wrappingWidth="163.2">
                            <font>
-                              <Font name="UTM Facebook" size="31.0" />
+                              <Font name="Bungee Regular" size="31.0" />
                            </font>
                         </Text>
                      </children>
@@ -91,7 +91,7 @@
                      <children>
                         <Text fill="WHITE" layoutX="46.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUẦN" textAlignment="CENTER" wrappingWidth="163.2">
                            <font>
-                              <Font name="UTM Facebook" size="31.0" />
+                              <Font name="Bungee Regular" size="31.0" />
                            </font>
                         </Text>
                      </children>
@@ -100,7 +100,7 @@
                      <children>
                         <Text fill="WHITE" layoutX="46.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GIÀY" textAlignment="CENTER" wrappingWidth="163.2">
                            <font>
-                              <Font name="UTM Facebook" size="31.0" />
+                              <Font name="Bungee Regular" size="31.0" />
                            </font>
                         </Text>
                      </children>
@@ -108,9 +108,9 @@
                </children></Pane>
             <Pane layoutX="30.0" layoutY="303.0" prefHeight="318.0" prefWidth="503.0" style="-fx-background-color: #c1c7cf; -fx-background-radius: 20px; -fx-border-color: #485460; -fx-border-radius: 20; -fx-border-width: 3;" stylesheets="@../java.css">
                <children>
-                  <Text fill="#485460" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRENDING" wrappingWidth="163.2">
+                  <Text fill="#485460" layoutX="14.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, white, 4, 0.8, 0, 0);" text="TRENDING" wrappingWidth="218.39999999999986">
                      <font>
-                        <Font name="UTM Facebook" size="31.0" />
+                        <Font name="Bungee Regular" size="31.0" />
                      </font>
                   </Text>
                   <Pane layoutX="22.0" layoutY="70.0" prefHeight="178.0" prefWidth="134.0" style="-fx-background-color: #485460; -fx-background-radius: 20px; -fx-border-color: #485460; -fx-border-radius: 20; -fx-border-width: 3;" stylesheets="@../java.css">
@@ -145,13 +145,16 @@
                         <Font name="UTM Facebook" size="15.0" />
                      </font>
                   </Text>
-                  <Text fill="#485460" layoutX="22.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Streetwear là phong cách thời trang đường phố xuất phát từ văn hóa skate và hip-hop, mang đậm cá tính và sự năng động." wrappingWidth="384.828125" />
+                  <Text fill="#485460" layoutX="22.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Streetwear là phong cách thời trang đường phố xuất phát từ văn hóa skate và hip-hop, mang đậm cá tính và sự năng động." wrappingWidth="384.828125">
+                     <font>
+                        <Font name="UTM Facebook K&amp;T" size="12.0" />
+                     </font></Text>
                </children></Pane>
             <Pane layoutX="549.0" layoutY="303.0" prefHeight="318.0" prefWidth="218.0" style="-fx-background-color: #c1c7cf; -fx-background-radius: 20px; -fx-border-color: #485460; -fx-border-radius: 20; -fx-border-width: 3;" stylesheets="@../java.css">
                <children>
-                  <Text fill="#485460" layoutX="14.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, white, 4, 0.8, 0, 0);" text="SÁNG TẠO KHÔNG GIỚI HẠN" wrappingWidth="202.0">
+                  <Text fill="#485460" layoutX="14.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, white, 4, 0.8, 0, 0);" text="sáng tạo không giới hạn" wrappingWidth="229.6000244140625">
                      <font>
-                        <Font name="UTM Facebook" size="41.0" />
+                        <Font name="Bungee Regular" size="46.0" />
                      </font>
                   </Text>
                </children>
@@ -164,9 +167,9 @@
                      </image>
                   </ImageView>
                   <Label layoutX="176.0" layoutY="13.0" />
-                  <Label fx:id="nameuser" layoutX="75.0" layoutY="-2.0" prefHeight="51.0" prefWidth="202.0" text="tên">
+                  <Label fx:id="nameuser" layoutX="75.0" layoutY="-2.0" prefHeight="51.0" prefWidth="202.0" style="-fx-font-family: &quot;bungge&quot;;" text="um ba la">
                      <font>
-                        <Font name="UTM Facebook" size="30.0" />
+                        <Font name="Bernard MT Condensed" size="31.0" />
                      </font>
                   </Label>
                </children>

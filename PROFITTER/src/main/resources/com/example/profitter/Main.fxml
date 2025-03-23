@@ -82,9 +82,9 @@
                   <Image url="@Controller/Image/5f4b1c48-e020-40e5-9903-c85b9ee07d6a.jpg" />
                </image>
             </ImageView>
-            <Text fill="#1e253d" layoutX="14.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-stroke: white; -fx-stroke-width: 3;" text="PROFITTER" wrappingWidth="455.00194373497595">
+            <Text fill="#485460" layoutX="25.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-stroke: white; -fx-stroke-width: 2.5;" text="PROFITTER" wrappingWidth="455.00194373497595">
                <font>
-                  <Font name="UTM Facebook" size="66.0" />
+                  <Font name="Bungee Regular" size="66.0" />
                </font>
             </Text>
          </children>
@@ -99,16 +99,16 @@
                </font></Button>
             <Button fx:id="login" layoutX="98.0" layoutY="13.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="40.0" prefWidth="150.0" stylesheets="@java.css" text="ĐĂNG NHẬP">
                <font>
-                  <Font name="UTM Facebook K&amp;T" size="13.0" />
+                  <Font name="UTM Facebook K&amp;T" size="12.0" />
                </font></Button>
-            <Text fill="#1e253d" layoutX="24.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trong thế giới thời trang, &quot;sáng tạo không giới hạn&quot; không chỉ là một câu nói – đó là một tuyên ngôn, một lời mời gọi bước vào vũ trụ vô tận của màu sắc, chất liệu và phong cách. Khi phối đồ, bạn không bị ràng buộc bởi bất kỳ quy tắc cứng nhắc nào – chính sự phá cách mới tạo nên dấu ấn riêng." wrappingWidth="396.3251037597656">
+            <Text fill="#485460" layoutX="24.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trong thế giới thời trang, &quot;sáng tạo không giới hạn&quot; không chỉ là một câu nói – đó là một tuyên ngôn, một lời mời gọi bước vào vũ trụ vô tận của màu sắc, chất liệu và phong cách. Khi phối đồ, bạn không bị ràng buộc bởi bất kỳ quy tắc cứng nhắc nào – chính sự phá cách mới tạo nên dấu ấn riêng." wrappingWidth="396.3251037597656">
                <font>
-                  <Font name="Arial" size="13.0" />
+                  <Font name="UTM Akashi" size="13.0" />
                </font>
             </Text>
-            <Text fill="#1e253d" fontSmoothingType="LCD" layoutX="27.0" layoutY="226.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-stroke: white; -fx-stroke-width: 3; -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2);" text="SÁNG TẠO KHÔNG GIỚI HẠN" wrappingWidth="389.3361863974144">
+            <Text id="#custom-font" fill="#485460" fontSmoothingType="LCD" layoutX="14.0" layoutY="237.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-stroke: white; -fx-stroke-width: 3; -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2);" styleClass="custom-font" text="SÁNG TẠO KHÔNG GIỚI HẠN" wrappingWidth="439.7362108114769">
                <font>
-                  <Font name="UTM Facebook" size="73.0" />
+                  <Font name="Bungee Regular" size="79.0" />
                </font>
             </Text>
          </children>

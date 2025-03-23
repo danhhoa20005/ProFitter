@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.profitter.Controller.LoginController">
-   <center>
+   <center> 
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #d2dae2;" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="userName" layoutX="225.0" layoutY="161.0" />
@@ -18,19 +18,22 @@
                <font>
                   <Font name="UTM Facebook K&amp;T" size="12.0" />
                </font></Button>
-            <Text fill="#1e253d" layoutX="284.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOẶC" />
+            <Text fill="#485460" layoutX="282.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOẶC">
+               <font>
+                  <Font name="Bungee Regular" size="12.0" />
+               </font></Text>
             <Button fx:id="register" layoutX="244.0" layoutY="315.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="40.0" prefWidth="112.0" stylesheets="@../java.css" text="ĐĂNG KÝ">
                <font>
                   <Font name="UTM Facebook K&amp;T" size="12.0" />
                </font></Button>
-            <Text fill="#1e253d" layoutX="109.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-stroke: white; -fx-stroke-width: 2;" text="PROFITTER">
+            <Text fill="#485460" layoutX="93.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0.5, 2, 2); -fx-stroke: white; -fx-stroke-width: 2;" text="PROFITTER">
                <font>
-                  <Font name="AzonixRegular" size="60.0" />
+                  <Font name="Bungee Regular" size="68.0" />
                </font>
             </Text>
-            <Text fill="#1e253d" layoutX="231.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ĐĂNG NHẬP" wrappingWidth="170.0676855959485">
+            <Text fill="#485460" layoutX="231.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ĐĂNG NHẬP" wrappingWidth="170.0676855959485">
                <font>
-                  <Font name="UTM Facebook" size="22.0" />
+                  <Font name="Bungee Regular" size="22.0" />
                </font>
             </Text>
          </children>

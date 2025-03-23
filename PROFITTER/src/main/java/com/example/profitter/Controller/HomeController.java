@@ -60,6 +60,20 @@ public class HomeController {
 
     @FXML
     void khoAction(ActionEvent event) {
+        Stage mainStage = new Stage();
+        mainStage.setTitle("PROFITTER");
+
+        // Load file FXML và tạo Scene
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("kho.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Stage stage = (Stage) thudo.getScene().getWindow();
+
+        // Cập nhật root của Scene (dùng chung Stage, không tạo cái mới)
+        stage.getScene().setRoot(root);
 
 
 

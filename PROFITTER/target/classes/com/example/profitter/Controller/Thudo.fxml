@@ -3,6 +3,7 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,6 +15,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.profitter.Controller.ThudoController">
    <right>
@@ -112,16 +114,17 @@
       </VBox>
    </right>
    <left>
-      <AnchorPane fx:id="paneImage" prefHeight="625.0" prefWidth="345.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="paneImage" prefHeight="625.0" prefWidth="345.0" style="-fx-background-color: #d2dae2; -fx-border-color: #485460;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="633.0" fitWidth="368.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="nen" fitHeight="633.0" fitWidth="413.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 1;">
                <image>
                   <Image url="@../../../../../../../../../Users/ADMIN/Pictures/Saved%20Pictures/SnapBG.ai_1742608116881.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="shirtmodel" fitHeight="250.0" fitWidth="266.0" layoutX="58.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="pantmodel" fitHeight="253.0" fitWidth="200.0" layoutX="88.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="shoesmodel" fitHeight="124.0" fitWidth="133.0" layoutX="122.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="shoesmodel" fitHeight="166.0" fitWidth="178.0" layoutX="101.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="pantmodel" fitHeight="358.0" fitWidth="281.0" layoutX="50.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="shirtmodel" fitHeight="286.0" fitWidth="288.0" layoutX="46.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" />
+            <Slider fx:id="opa" layoutX="14.0" layoutY="34.0" orientation="VERTICAL" prefHeight="16.0" prefWidth="14.0" />
          </children>
       </AnchorPane>
    </left>
@@ -138,21 +141,26 @@
                   <Font name="UTM Facebook K&amp;T" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="addPant" layoutX="597.0" layoutY="7.0" minHeight="20.0" minWidth="75.0" mnemonicParsing="false" onAction="#addPantAction" prefHeight="26.0" prefWidth="133.0" style="-fx-background-color: #ececec; -fx-background-radius: 10; -fx-border-radius: 10;" text="ADD QUẦN" textFill="#485460">
+            <Button fx:id="addPant" layoutX="602.0" layoutY="7.0" minHeight="20.0" minWidth="75.0" mnemonicParsing="false" onAction="#addPantAction" prefHeight="26.0" prefWidth="129.0" style="-fx-background-color: #ececec; -fx-background-radius: 10; -fx-border-radius: 10;" text="ADD QUẦN" textFill="#485460">
                <font>
                   <Font name="UTM Facebook K&amp;T" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="addShirt" layoutX="419.0" layoutY="6.0" minHeight="20.0" minWidth="75.0" mnemonicParsing="false" onAction="#addShirtAction" prefHeight="26.0" prefWidth="133.0" style="-fx-background-color: #ececec; -fx-background-radius: 10; -fx-border-radius: 10;" text="ADD ÁO" textFill="#485460">
+            <Button fx:id="addShirt" layoutX="427.0" layoutY="6.0" minHeight="20.0" minWidth="75.0" mnemonicParsing="false" onAction="#addShirtAction" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: #ececec; -fx-background-radius: 10; -fx-border-radius: 10;" text="ADD ÁO" textFill="#485460">
                <font>
                   <Font name="UTM Facebook K&amp;T" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="addShoe" layoutX="779.0" layoutY="7.0" minHeight="20.0" minWidth="75.0" mnemonicParsing="false" onAction="#addShoesAction" prefHeight="26.0" prefWidth="134.0" style="-fx-background-color: #ececec; -fx-background-radius: 10; -fx-border-radius: 10;" text="ADD GIÀY" textFill="#485460">
+            <Button fx:id="addShoe" layoutX="783.0" layoutY="7.0" minHeight="20.0" minWidth="75.0" mnemonicParsing="false" onAction="#addShoesAction" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #ececec; -fx-background-radius: 10; -fx-border-radius: 10;" text="ADD GIÀY" textFill="#485460">
                <font>
                   <Font name="UTM Facebook K&amp;T" size="12.0" />
                </font>
             </Button>
+            <Text fill="#353a56" layoutX="263.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, white, 4, 0.8, 0, 0);" text="THỬ ĐỒ">
+               <font>
+                  <Font name="Bungee Regular" size="24.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </top>

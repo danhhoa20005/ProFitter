@@ -20,8 +20,6 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         FontLoader.loadAllFonts(); // Gọi phương thức nạp font trước khi tạo Scene
         primaryStage = stage; // Gán stage chính cho biến tĩnh
-
-
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
         stage.setScene(new Scene(root, 950, 650));
 
